@@ -1,4 +1,4 @@
-<table>
+<table style="border: none;">
 <tr>
   <td>
     <img src="lagunita.png">
