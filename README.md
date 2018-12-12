@@ -75,7 +75,7 @@
 
 |Code|Class|Notes|Code|Status|
 |------|-----|-----|-----|------|
-|C601|[Databases](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about)|||In Progress|
+|C601|[Databases](https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about)|[c601_notes](https://github.com/shinroo/ossu-cs/blob/master/coursework/core_modules/c600_applications_core/c601_databases/notes.md)||In Progress|
 |C602|[Machine Learning](https://www.coursera.org/learn/machine-learning)||||
 |C603|[Computer Graphics](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x)||||
 |C604|[Cryptography I](https://www.coursera.org/course/crypto)||||
