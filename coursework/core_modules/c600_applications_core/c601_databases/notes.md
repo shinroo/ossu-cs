@@ -1,10 +1,10 @@
-<table style="border: none;">
+<table border="0">
 <tr>
   <td>
     <img src="lagunita.png">
   </td>
   <td>
-    <h1>
+    <h1 align="right">
       Database Course
     </h1>
   </td>
