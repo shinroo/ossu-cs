@@ -1,0 +1,14 @@
+Databases
+Stanford Lagunita
+
+Mini-courses:
+
+- Introduction and Relational Databases (DB1)
+
+	Topics:
+	Introduction to Databases
+	The Relational Model
+	Querying Relational Databases
+
+	Readings:
+	Introduction to SQL, Philip Greenspun
