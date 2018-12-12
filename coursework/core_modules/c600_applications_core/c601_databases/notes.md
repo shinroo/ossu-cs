@@ -1,5 +1,8 @@
-# Databases
-# Stanford Lagunita
+![Stanford Lagunita](lagunita.png)
+
+# Databases Course
+
+Course started: 12/12/2018
 
 ## Introduction and Relational Databases (DB1)
 
@@ -16,6 +19,8 @@
 |[Schema](https://techterms.com/definition/schema)|A schema is an outline, diagram, or model often used to **describe the structure** of different types of data|
 
 ![DBMS by Market Share](DBMS_by_market_share.JPG)
+
+### Types of Databases
 
 ### The Relational Model
 
