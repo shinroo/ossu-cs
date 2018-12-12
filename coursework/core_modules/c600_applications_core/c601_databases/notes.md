@@ -1,11 +1,15 @@
 <div>
-  <col width="20">
-    <img src="lagunita.png">
+  <col>
+    <div>
+      <img src="lagunita.png">
+    </div>
   </col>
-  <col width="80">
-    <h1 align="right">
-      Database Course
-    </h1>
+  <col>
+    <div>
+      <h1 align="right">
+        Database Course
+      </h1>
+    </div>
   </col>
 <div>
 
