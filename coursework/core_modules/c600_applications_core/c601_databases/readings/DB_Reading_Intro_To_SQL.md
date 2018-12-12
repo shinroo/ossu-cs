@@ -119,10 +119,9 @@ demaagd@cs.hope.edu (David DeMaagd) wrote:
 
 You can use two apostrophes '' and SQL will treat it as one.
 
-===========================================================
-Pete Nelson     | Programmers are almost as good at reading
-weasel@ecis.com | documentation as they are at writing it.
-===========================================================
+> Programmers are almost as good at reading documentation as they are at writing it.
+> Pete Nelson (weasel@ecis.com)
+
 We'll take Pete Nelson's advice and double the single quote in "O'Grady":
 insert into mailing_list (name, email)
 values ('Michael O''Grady','ogrady@fastbuck.com');
