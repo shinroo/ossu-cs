@@ -1,6 +1,7 @@
-![Stanford Lagunita](lagunita.png)
-
-# Databases Course
+<h1 align="right">
+  Database Course
+  <img align="left" src="doc/subpagelist.png" />
+</h1>
 
 Course started: 12/12/2018
 
