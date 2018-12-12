@@ -1,7 +1,15 @@
-<h1 align="right">
-  Database Course
-  <img align="left" src="lagunita.png" />
-</h1>
+<table>
+<tr>
+  <td>
+    <img src="lagunita.png">
+  </td>
+  <td>
+    <h1>
+      Database Course
+    </h1>
+  </td>
+</tr>
+</table>
 
 Course started: 12/12/2018
 
