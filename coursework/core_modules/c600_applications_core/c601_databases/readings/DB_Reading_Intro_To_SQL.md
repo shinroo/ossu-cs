@@ -127,9 +127,13 @@ insert into mailing_list (name, email)
 values ('Michael O''Grady','ogrady@fastbuck.com');
 Having created a table and inserted some data, at last we are ready to experience the awesome power of the SQL SELECT. Want your data back?
 
+```SQL
 select * from mailing_list;
+```
+
 If you typed this query into a standard shell-style RDBMS client program, for example Oracle's SQL*PLUS, you'd get ... a horrible mess. That's because you told Oracle that the columns could be as wide as 100 characters (varchar(100)). Very seldom will you need to store e-mail addresses or names that are anywhere near as long as 100 characters. However, the solution to the "ugly report" problem is not to cut down on the maximum allowed length in the database. You don't want your system failing for people who happen to have exceptionally long names or e-mail addresses. The solution is either to use a more sophisticated tool for querying your database or to give SQL*Plus some hints for preparing a report:
 
+```SQL
 SQL> column email format a25
 SQL> column name  format a25
 SQL> column phone_number format a12
@@ -140,6 +144,7 @@ EMAIL			  NAME			    PHONE_NUMBER
 ------------------------- ------------------------- ------------
 philg@mit.edu		  Philip Greenspun
 ogrady@fastbuck.com	  Michael O'Grady
+```
 
 2 rows selected.
 Note that there are no values in the phone_number column because we haven't set any. As soon as we do start to add phone numbers, we realize that our data model was inadequate. This is the Internet and Joe Typical User will have his pants hanging around his knees under the weight of a cell phone, beeper, and other personal communication accessories. One phone number column is clearly inadequate and even work_phone and home_phone columns won't accommodate the wealth of information users might want to give us. The clean database-y way to do this is to remove our phone_number column from the mailing_list table and define a helper table just for the phone numbers. Removing or renaming a column turns out to be impossible in Oracle 8 (see the "Data Modeling" chapter for some ALTER TABLE commands that become possible starting with Oracle 8i), so we
@@ -165,7 +170,7 @@ You'll pick up readers of Psychology Today who think you are sensitive and carin
 Another item worth noting about our two-table data model is that we do not store the user's name in the phone_numbers table. That would be redundant with the mailing_list table and potentially self-redundant as well, if, for example, "robert.loser@fastbuck.com" says he is "Robert Loser" when he types in his work phone and then "Rob Loser" when he puts in his beeper number, and "Bob Lsr" when he puts in his cell phone number while typing on his laptop's cramped keyboard. A database nerd would say that that this data model is consequently in "Third Normal Form". Everything in each row in each table depends only on the primary key and nothing is dependent on only part of the key. The primary key for the phone_numbers table is the combination of email and number_type. If you had the user's name in this table, it would depend only on the email portion of the key.
 Anyway, enough database nerdism. Let's populate the phone_numbers table:
 
-```
+```SQL
 SQL> insert into phone_numbers values ('ogrady@fastbuck.com','work','(800) 555-1212');
 
 ORA-02291: integrity constraint (SCOTT.SYS_C001080) violated - parent key not found
@@ -173,7 +178,7 @@ ORA-02291: integrity constraint (SCOTT.SYS_C001080) violated - parent key not fo
 
 Ooops! When we dropped the mailing_list table, we lost all the rows. The phone_numbers table has a referential integrity constraint ("references mailing_list") to make sure that we don't record e-mail addresses for people whose names we don't know. We have to first insert the two users into mailing_list:
 
-```
+```SQL
 insert into mailing_list (name, email)
 values ('Philip Greenspun','philg@mit.edu');
 insert into mailing_list (name, email)
@@ -189,14 +194,14 @@ insert into phone_numbers values ('ogrady@fastbuck.com','beper','(617) 222-3456'
 Note that the last four INSERTs use an evil SQL shortcut and don't specify the columns into which we are inserting data. The system defaults to using all the columns in the order that they were defined. Except for prototyping and playing around, we don't recommend ever using this shortcut.
 The first three INSERTs work fine, but what about the last one, where Mr. O'Grady misspelled "beeper"?
 
-```
+```SQL
 ORA-02290: check constraint (SCOTT.SYS_C001079) violated
 ```
 
 We asked Oracle at table definition time to check (number_type in ('work','home','cell','beeper')) and it did. The database cannot be left in an inconsistent state.
 Let's say we want all of our data out. Email, full name, phone numbers. The most obvious query to try is a join.
 
-```
+```SQL
 SQL> select * from mailing_list, phone_numbers;
 
 EMAIL		 NAME		  EMAIL 	   TYPE   NUMBER
@@ -213,7 +218,7 @@ ogrady@fastbuck. Michael O'Grady  philg@mit.edu    work   (617) 253-8574
 
 Yow! What happened? There are only two rows in the mailing_list table and three in the phone_numbers table. Yet here we have six rows back. This is how joins work. They give you the Cartesian product of the two tables. Each row of one table is paired with all the rows of the other table in turn. So if you join an N-row table with an M-row table, you get back a result with N*M rows. In real databases, N and M can be up in the millions so it is worth being a little more specific as to which rows you want:
 
-```
+```SQL
 select * 
 from mailing_list, phone_numbers
 where mailing_list.email = phone_numbers.email;
@@ -229,7 +234,7 @@ philg@mit.edu	 Philip Greenspun philg@mit.edu    work   (617) 253-8574
 
 Probably more like what you had in mind. Refining your SQL statements in this manner can sometimes be more exciting. For example, let's say that you want to get rid of Philip Greenspun's phone numbers but aren't sure of the exact syntax.
 
-```
+```SQL
 SQL> delete from phone_numbers;
 
 3 rows deleted.
@@ -240,7 +245,7 @@ delete from phone_numbers where email = 'philg@mit.edu';
 but it is too late now.
 There is one more fundamental SQL statement to learn. Suppose that Philip moves to Hollywood to realize his long-standing dream of becoming a major motion picture producer. Clearly a change of name is in order, though he'd be reluctant to give up the e-mail address he's had since 1976. Here's the SQL:
 
-```
+```SQL
 SQL> update mailing_list set name = 'Phil-baby Greenspun' where email = 'philg@mit.edu';
 
 1 row updated.
@@ -258,11 +263,13 @@ ogrady@fastbuck.com  Michael O'Grady
 As with DELETE, don't play around with UPDATE statements unless you have a WHERE clause at the end.
 
 ## Brave New World
+
 The original mid-1970s RDBMS let companies store the following kinds of data: numbers, dates, and character strings. After more than twenty years of innovation, you can today run out to the store and spend $300,000 on an "enterprise-class" RDBMS that will let you store the following kinds of data: numbers, dates, and character strings.
 With an object-relational database, you get to define your own data types. For example, you could define a data type called url...
 
 http://www.postgresql.org.
 
 ## Braver New World
+
 Millesgarden. Stockholm, Sweden If you really want to be on the cutting edge, you can use a bona fide object database, like Object Design's ObjectStore (acquired by Progress Software). These persistently store the sorts of object and pointer structures that you create in a Smalltalk, Common Lisp, C++, or Java program. Chasing pointers and certain kinds of transactions can be 10 to 100 times faster than in a relational database. If you believed everything in the object database vendors' literature, then you'd be surprised that Larry Ellison still has $100 bills to fling to peasants as he roars past in his Acura NSX. The relational database management system should have been crushed long ago under the weight of this superior technology, introduced with tremendous hype in the mid-1980s.
 After 10 years, the market for object database management systems is about $100 million a year, perhaps 1 percent the size of the relational database market. Why the fizzle? Object databases bring back some of the bad features of 1960s pre-relational database management systems. The programmer has to know a lot about the details of data storage. If you know the identities of the objects you're interested in, then the query is fast and simple. But it turns out that most database users don't care about object identities; they care about object attributes. Relational databases tend to be faster and better at coughing up aggregations based on attributes. The critical difference between RDBMS and ODBMS is the extent to which the programmer is constrained in interacting with the data. With an RDBMS the application program--written in a procedural language such as C, COBOL, Fortran, Perl, or Tcl--can have all kinds of catastrophic bugs. However, these bugs generally won't affect the information in the database because all communication with the RDBMS is constrained through SQL statements. With an ODBMS, the application program is directly writing slots in objects stored in the database. A bug in the application program may translate directly into corruption of the database, one of an organization's most valuable assets.
