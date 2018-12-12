@@ -1,17 +1,5 @@
-<div style="padding: 30px;">
-  <col>
-    <div style="margin: 0 auto; width: 100px;">
-      <img src="lagunita.png">
-    </div>
-  </col>
-  <col>
-    <div style="margin: 0 auto; width: 100px;">
-      <h1 align="right">
-        Database Course
-      </h1>
-    </div>
-  </col>
-<div>
+|![Stanford Lagunita](lagunita.png)| **Database Course** |
+|----------------------------------|--------------------:|
 
 Course started: 12/12/2018
 
