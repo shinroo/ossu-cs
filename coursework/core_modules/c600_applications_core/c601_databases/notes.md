@@ -1,15 +1,13 @@
-<table border="0">
-<tr>
-  <td>
+<div>
+  <col width="20">
     <img src="lagunita.png">
-  </td>
-  <td>
+  </col>
+  <col width="80">
     <h1 align="right">
       Database Course
     </h1>
-  </td>
-</tr>
-</table>
+  </col>
+<div>
 
 Course started: 12/12/2018
 
