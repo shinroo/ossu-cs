@@ -1,0 +1,21 @@
+body {
+	background-color: rgb(100,100,100);
+}
+
+h1 {
+	color: rgb(255,255,255);
+}
+
+p {
+	color: rgb(200, 200, 200);
+}
+
+img {
+	height: 43.2px; 
+	width: 110.9px;
+}
+
+img:hover {
+	height: 86.4px; 
+	width: 221.8px;
+}

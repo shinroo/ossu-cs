@@ -193,7 +193,7 @@ An extension of HSLA, analagous to RBGA.
 
 ### CSS
 
-**Cascading Style Sheets** describe how HRML elements are to be displayed.
+**Cascading Style Sheets** describe how HTML elements are to be displayed.
 
 CSS may be added in the following ways:
 
