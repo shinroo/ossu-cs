@@ -43,3 +43,11 @@ Explanation of tags:
 |```<body>```|Contains visible page content|
 |```<h1>```|Large heading|
 |```<p>```|Paragraph|
+
+### Basics
+
+- heading tags range from ```<h1>```(largest) to ```<h6>```(smallest)
+- links make use of the ```<a>``` tag which is used as follows: ```<a href="https://www.google.com/">Google</a>```
+- images are defined with ```<img>```, which is structured as follows: ```<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">```
+- buttons may be defined with ```<button>```
+- lists in html come in two variants, ```<ol>``` for numbered lists and ```<ul>``` for bullet point lists. both make use of the ```<li>``` tag to define list elements
