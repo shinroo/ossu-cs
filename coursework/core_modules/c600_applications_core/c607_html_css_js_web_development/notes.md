@@ -82,3 +82,14 @@ Common attributes:
 or
 
 ```<p title="John 'ShotGun' Nelson">```
+
+### Headings
+
+Search engines use headings to **index** the structure and content of a page. ```<h1>``` signifies very important content, with the importance diminishing with each increment in the tag.
+
+- Each HTML heading has a default size which may changed using the font-size CSS property of the style attribute: ```<h1 style="font-size:60px;">Heading 1</h1>```
+- The ```<hr>``` tag may be used to create a horizontal rule, representing a thematic break in the content of a page
+
+### Paragraphs
+
+The screen size will affect how HTML content is rendered. Whitespace is ignored.
