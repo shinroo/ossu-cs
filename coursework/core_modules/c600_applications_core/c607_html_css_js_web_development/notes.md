@@ -51,3 +51,34 @@ Explanation of tags:
 - images are defined with ```<img>```, which is structured as follows: ```<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">```
 - buttons may be defined with ```<button>```
 - lists in html come in two variants, ```<ol>``` for numbered lists and ```<ul>``` for bullet point lists. both make use of the ```<li>``` tag to define list elements
+- closing tags are optional, however it is recommended to use them as their omission may result in unexpected results across different browsers
+- elements with no content are called empty elements, an example of which is the ```<br>``` tag which defines a line break
+- tags are not case sensitive, however the accepted convention is to use lowercase tags
+
+### Attributes
+
+All HTML elements can make use of attributes, which provide **additional information** about the element.
+
+- always specified in the start tag
+- usually come in ```key="value"``` pairs
+- it is recommended to use lower case attributes
+
+Common attributes:
+
+|Attribute|Used in|Function|
+|---------|-------|--------|
+|href|```<a>```|Specifies link address|
+|src|```<img>```|Specifies source of content, such as filenames|
+|width, height|```<img>```|Specify dimensions|
+|alt|```<img>```|Specifies text to be used in cases where image cannot be displayed, such as the use of "screen readers" by visually impaired people|
+|style|all tags|Specifies styling of an element|
+|lang|```<html>```|Declares language of document|
+
+**Note**: In attributes that require quotes, the convention is to use double quotes. However it may be necessary to use a combination of single and double quotes in certain circumstances such as:
+
+```<p title='John "ShotGun" Nelson'>```
+
+or
+
+```<p title="John 'ShotGun' Nelson">```
+|title|all tags|Defines tooltip text|
