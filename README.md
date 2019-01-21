@@ -81,6 +81,7 @@
 |C604|[Cryptography I](https://www.coursera.org/course/crypto)||||
 |C605|[Software Engineering: Introduction](https://www.edx.org/course/software-engineering-introduction-ubcx-softeng1x)||||
 |C606|[Software Development Capstone Project](https://www.edx.org/course/software-development-capstone-project-ubcx-softengprjx)||||
+|C607|[Web Development: HTML, CSS, JavaScript](https://www.w3schools.com/html/default.asp)|||In Progress|
 
 ## Advanced Modules
 
@@ -161,3 +162,15 @@
 |A513|Big Data Integration and Processing||||
 |A514|Machine Learning With Big Data||||
 |A515|Graph Analytics for Big Data||||
+
+#### [Full Stack Web and Multiplatform Mobile App Development](https://www.coursera.org/specializations/full-stack-mobile-app-development)
+
+**Topics covered**: `bootstrap` `node.js` `jquery` `SASS` `LESS` `angularjs` `reactive programming` `typescript` `ionic` `apache cordova` `mobile application development` `user authentication` `mongodb` `expressjs` `REST` `APIs`
+
+|Code|Class|Notes|Code|Status|
+|------|-----|-----|-----|------|
+|A516|Front-End Web UI Frameworks and Tools: Bootstrap 4||||
+|A517|Front-End JavaScript Frameworks: Angular||||
+|A518|Multiplatform Mobile App Development with Web Technologies: Ionic and Cordova||||
+|A519|Multiplatform Mobile App Development with NativeScript||||
+|A520|Server-side Development with NodeJS, Express and MongoDB||||
