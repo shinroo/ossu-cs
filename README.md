@@ -81,7 +81,7 @@
 |C604|[Cryptography I](https://www.coursera.org/course/crypto)||||
 |C605|[Software Engineering: Introduction](https://www.edx.org/course/software-engineering-introduction-ubcx-softeng1x)||||
 |C606|[Software Development Capstone Project](https://www.edx.org/course/software-development-capstone-project-ubcx-softengprjx)||||
-|C607|[Web Development: HTML, CSS, JavaScript](https://www.w3schools.com/html/default.asp)|||In Progress|
+|C607|[Web Development: HTML, CSS, JavaScript](https://www.w3schools.com/html/default.asp)|[c607_notes](https://github.com/shinroo/ossu-cs/blob/master/coursework/core_modules/c600_applications_core/c607_html_css_js_web_development/notes.md)||In Progress|
 
 ## Advanced Modules
 
