@@ -73,6 +73,7 @@ Common attributes:
 |alt|```<img>```|Specifies text to be used in cases where image cannot be displayed, such as the use of "screen readers" by visually impaired people|
 |style|all tags|Specifies styling of an element|
 |lang|```<html>```|Declares language of document|
+|title|all tags|Defines tooltip text|
 
 **Note**: In attributes that require quotes, the convention is to use double quotes. However it may be necessary to use a combination of single and double quotes in certain circumstances such as:
 
@@ -81,4 +82,3 @@ Common attributes:
 or
 
 ```<p title="John 'ShotGun' Nelson">```
-|title|all tags|Defines tooltip text|
