@@ -190,3 +190,90 @@ An extension of RGB to include an alpha value which controls transparency (from 
 An extension of HSLA, analagous to RBGA.
 
 ```<h1 style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</h1>```
+
+### CSS
+
+**Cascading Style Sheets** describe how HRML elements are to be displayed.
+
+CSS may be added in the following ways:
+
+- **Inline CSS**
+
+Making use of the style attribute
+
+- **Internal CSS**
+
+Making use of the ```<style>``` tag in the head section of the document
+
+```HTML
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+```
+
+- **External CSS**
+
+Making use of the ```<link>``` tag in the head section of the document
+
+```HTML
+<link rel="stylesheet" href="styles.css">
+```
+
+or 
+
+```HTML
+<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+```
+
+Depending on where the stylesheet being linked is located
+
+**Common CSS Properties**
+
+|Property|Function|Example|
+|--------|--------|-------|
+|border|Defines a border around an element|```p {border: 1px solid powderblue;} ```|
+|padding|Defines a space between the border and the contents of an element, such as text|```p {border: 1px solid powderblue; padding: 30px;}```|
+|margin|Defines a space around the border of an element|```p {border: 1px solid powderblue; margin: 50px;}```|
+
+
+CSS can be selectively applied to elements as follows:
+
+- Applying to a type of element
+
+```CSS
+p {
+  border: 1px solid powderblue;
+}
+```
+
+- Applying to a specific element
+
+Making use of the **id** attribute (note that ids must be unique)
+
+```HTML
+<p id="p01">I am different</p>
+```
+
+```CSS
+#p01 {
+  color: blue;
+}
+```
+
+- Applying to a group of elements
+
+Making use of the **class** attribute
+
+```HTML
+<p class="error">I am different</p>
+```
+
+```CSS
+p.error {
+  color: red;
+}
+```
