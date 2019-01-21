@@ -141,3 +141,52 @@ Examples of formatting tags:
 |```<cite>```|Titles of works|```<cite>The Scream</cite>```|
 |```<bdo>```|Override text directions|```<bdo dir="rtl">This text will be written from right to left</bdo>```|
 
+### Comments
+
+Comments can be added to HTML as follows:
+
+```HTML
+<!-- Do not display this at the moment
+<img border="0" src="pic_trulli.jpg" alt="Trulli">
+-->
+```
+
+### Colors
+
+HTML colours may be defined using:
+
+- **Predefined Names**
+
+Examples include: __DodgerBlue__ and __Tomato__
+
+```<p style="background-color:Tomato;">Lorem ipsum...</p>```
+
+- **RGB**
+
+rgb(red, green, blue), where each parameter defines the intensity from 0 to 255
+
+```<h1 style="background-color:rgb(255, 0, 0);">rgb(255, 0, 0)</h1>```
+
+- **Hexadecimal**
+
+\#rrggbb, where rr, gg and bb represent hexadecimal values from 00 to ff
+
+```<h1 style="background-color:#ff0000;">#ff0000</h1>```
+
+- **HSL**
+
+hsl(hue, saturation, lightness), where hue is a degree on the colour wheel (0 to 360), saturation is a percentage ranging from a shade of grey at 0% to the full colour at 100% and lightness is a percentage ranging from 0% which is black to 100% which is white (50% would be neither light nor dark)
+
+```<h1 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h1>```
+
+- **RGBA**
+
+An extension of RGB to include an alpha value which controls transparency (from 0.0 which is fully transparent to 1.0 which is opaque)
+
+```<h1 style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</h1>```
+
+- **HSLA**
+
+An extension of HSLA, analagous to RBGA.
+
+```<h1 style="background-color:hsla(9, 100%, 64%, 0);">hsla(9, 100%, 64%, 0)</h1>```
