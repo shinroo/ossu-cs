@@ -13,7 +13,7 @@ HTML (Hyper Text Markup Language) is the standard markup language for web pages.
 - elements are the bulding blocks of HTML
 - elements are represented by tags
 - tags label pieces of content
-- broswers render content of page from tags
+- **broswers render content** of page from tags
 
 Simple example:
 
@@ -32,4 +32,14 @@ Simple example:
 </html>
 ```
 
+Explanation of tags:
 
+|Tag|Function|
+|---|--------|
+|```<!DOCTYPE html>```|Defines document to be HTML5|
+|```<html>```|Root element of an HTML page|
+|```<head>```|Contains meta information about the document|
+|```<title>```|Specifies document title|
+|```<body>```|Contains visible page content|
+|```<h1>```|Large heading|
+|```<p>```|Paragraph|
