@@ -92,4 +92,52 @@ Search engines use headings to **index** the structure and content of a page. ``
 
 ### Paragraphs
 
-The screen size will affect how HTML content is rendered. Whitespace is ignored.
+- the screen size will affect how HTML content is rendered
+- **whitespace is ignored** within ```<p>``` tags
+
+### Styles
+
+The style attribute controls the style of an element.
+
+This attribute has the following syntax: ```<tagname style="property:value;">```. Property and value refer to CSS.
+
+Some examples:
+
+|Style|Function|Example|
+|-----|--------|-------|
+|background-color|Defines the background colour|```<body style="background-color:powderblue;">```|
+|color|Defines text colour|```<p style="color:red;">This is a paragraph.</p>```|
+|font-family|Defines font type|```<p style="font-family:courier;">This is a paragraph.</p>```|
+|font-size|Defines font size|```<h1 style="font-size:300%;">This is a heading</h1>```|
+|text-align|Defines horizontal text alignment|```<p style="text-align:center;">Centered paragraph.</p>```|
+
+### Formatting
+
+HTML defines special elements for defining text with a special meaning
+
+Examples of formatting tags:
+
+|Formatting tag|Function|
+|--------------|--------|
+|```<b>```|bold|
+|```<strong>```|important|
+|```<i>```|italic|
+|```<em>```|emphasis|
+|```<mark>```|marked/highlighted|
+|```<small>```|small|
+|```<del>```|deleted|
+|```<ins>```|inserted|
+|```<sub>```|subscript|
+|```<sup>```|superscript|
+
+### Quotation and Citation Elements
+
+|Element|Function|Example|
+|-------|--------|-------|
+|```<q>```|Short quotations|```<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>```|
+|```<blockquote>```|Sections quoted from a source|```<blockquote cite="http://www.worldwildlife.org/who/index.html">For 50 years, WWF has been protecting the future of nature</blockquote>```|
+|```<abbr>```|Abbreviations|```<abbr title="World Health Organization">WHO</abbr>```|
+|```<address>```|Contact information|```<address>Written by John Doe.</address>```|
+|```<cite>```|Titles of works|```<cite>The Scream</cite>```|
+|```<bdo>```|Override text directions|```<bdo dir="rtl">This text will be written from right to left</bdo>```|
+
